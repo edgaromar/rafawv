@@ -2,6 +2,7 @@ package com.rafa.www.rafaapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,8 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         val webV = webView
 
-        webV.settings.javaScriptEnabled = true
-
+        //webV.settings.javaScriptEnabled = true
+        webV.webViewClient = WebViewClient()
         webV.loadUrl("http://www.google.com")
 
     }
